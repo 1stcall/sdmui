@@ -42,6 +42,13 @@
 		background: wheat;
 	}
 
+	.content {
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+		flex: 1 1 auto;
+	}
+
 	.nav ul {
 		list-style-type: none;
 		margin: 0;
