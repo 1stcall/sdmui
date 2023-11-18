@@ -1,12 +1,15 @@
-import data from '$lib/switches.json';
+import switches from '$lib/switches.json';
 
 export function load() {
 	return {
-		switches: data.map((switches) => ({
+		switches: switches.map((switches) => ({
 			name: switches.switch,
 			description: switches.description,
 			selected: switches.selected,
-			enabled: switches.enabled
+			editable: switches.editable,
+			hasArgument: switches.hasArgument,
+			argumentType: switches.argumentType,
+			argumentValue: switches.argumentValue
 		}))
 	};
 }
