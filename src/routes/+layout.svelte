@@ -1,5 +1,6 @@
 <script>
   import '@beyonk/gdpr-cookie-consent-banner/banner.css' // optional, you can also define your own styles
+  import '@fortawesome/fontawesome-free/css/all.min.css'
   import GdprBanner from '@beyonk/gdpr-cookie-consent-banner'
 
   function initAnalytics () {
@@ -7,7 +8,7 @@
   }
 </script>
 
-<GdprBanner heading="GDPR Cookie Notice" cookieName="AnotherCookie" description="Please let me store cookies on yor computer." on:analytics={initAnalytics} />
+<GdprBanner heading="GDPR Cookie Notice" cookieName="sdmui" description="Please let me store cookies on yor computer." on:analytics={initAnalytics} />
 
 <div class="page">
 	<div class="header">
@@ -35,8 +36,10 @@
 	<div class="clear"></div>
 
 	<div class="footer">
-		<p>Copyright &copy; 2023 1stcall Information Technology.  All rights researved.</p>
-		<p> <a href="https://github.com/1stcall/sdmui/"><i class="fa-brands fa-github"></i> See on github</a></p>
+		<p>
+		sdmui V0.2 Copyright &copy; 2023 1stcall Information Technology.  All rights researved.<br>
+		<a href="https://github.com/1stcall/sdmui/"><i class="fa-brands fa-github"></i> See us on github.</a>
+		</p>
 	</div>
 </div>
 
@@ -46,6 +49,7 @@
 		padding-left: 1rem;
 		padding-right: 1rem;
 		padding-top: 1rem;
+		padding-bottom: 1rem;
 		font-family: sans-serif;
 	}
 
@@ -56,6 +60,7 @@
 		position: sticky;
 		color: #194a9f;
 		font-family: 'Brush Script MT', cursive;
+		z-index: 999999;
 	}
 
 	.page .header .headlogo {
@@ -64,10 +69,12 @@
 
 	.page .header .headtext {
 		font-size: 2rem;
+/*
 		position: fixed;
 		top: 3rem;
 		width: 100%;
 		text-align: center;
+*/
 	}
 
 	.page .header .nav {
@@ -121,12 +128,13 @@
 		background: wheat;
    		left: 0.5rem;
 		right: 0.5rem;
-   		bottom: 0rem;
+   		bottom: 0;
    		text-align: center;
 		position: fixed;
 		border-top: 1px solid #bbb;
-		height: 4.5rem;
+		height: 4rem;
 		vertical-align: bottom;
+		z-index: 999999;
 	}
 
 	.page .footer a {
