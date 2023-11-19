@@ -8,85 +8,132 @@
 </script>
 
 <GdprBanner heading="GDPR Cookie Notice" cookieName="AnotherCookie" description="Please let me store cookies on yor computer." on:analytics={initAnalytics} />
+
 <div class="page">
-<div class="header">
-	<h1>1stcall's sdm command line generator</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">home</a></li>
-			<li><a href="/oslist">OS list</a></li>
-			<li><a href="/switches">switches</a></li>
-			<li style="float:right"><a href="/about">about</a></li>
-		</ul>
-	</nav>
-</div>
+	<div class="header">
+		<div class="headlogo">
+			<i class="fa-solid fa-tty fa-1xl"></i>
+			1stcall
+		</div>
+		<div class="headtext">
+			SDM Command Line Generator
+		</div>
+		<nav class="nav">
+			<ul>
+				<li><a href="/">home</a></li>
+				<li><a href="/oslist">OS list</a></li>
+				<li><a href="/switches">switches</a></li>
+				<li class="right"><a href="/about">about</a></li>
+			</ul>
+		</nav>
+	</div>
 
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="clear"></div>
+	<div class="content">
+		<slot />
+	</div>
 
-<div class="content">
-	<slot />
-</div>
+	<div class="clear"></div>
 
-<div class="clear"></div>
-
-<div class="footer">
-	<p>
-		Copyright &copy; 2023 1stcall Information Technology.  All rights researved.
-	</p>
-</div>
+	<div class="footer">
+		<p>Copyright &copy; 2023 1stcall Information Technology.  All rights researved.</p>
+		<p> <a href="https://github.com/1stcall/sdmui/"><i class="fa-brands fa-github"></i> See on github</a></p>
+	</div>
 </div>
 
 <style>
 	.page {
 		background: wheat;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 1rem;
+		font-family: sans-serif;
 	}
-	.nav ul {
+
+	.page .header {
+		background: wheat;
+		top: 0;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		color: #194a9f;
+		font-family: 'Brush Script MT', cursive;
+	}
+
+	.page .header .headlogo {
+		font-size: 4rem;
+	}
+
+	.page .header .headtext {
+		font-size: 2rem;
+		position: fixed;
+		top: 3rem;
+		width: 100%;
+		text-align: center;
+	}
+
+	.page .header .nav {
+		font-family: sans-serif;
+	}
+
+	.page .header .nav ul {
 		list-style-type: none;
-		margin: 0;
-		padding: 0;
 		overflow: hidden;
 		background-color: #333;
+		padding: 0;
 	}
-	.nav ul li {
+
+	.page .header .nav ul li {
 		float: left;
 		border-left: none;
 		border-right: 1px solid #bbb;
 	}
-	.nav ul li:last-child {
+
+	.page .header .nav ul li:last-child {
 		border-right: none;
 		border-left: 1px solid #bbb;
 	}
-	.nav ul li a {
+
+	.page .header .nav ul li a {
 		display: block;
 		color: white;
 		text-align: center;
 		padding: 14px 16px;
 		text-decoration: none;
 	}
-	.nav ul li a:hover {
+
+	.page .header .nav ul li a:hover {
 		background-color: #111;
 	}
-	.header {
-		left: 0.5rem;
-		right: 0.5rem;
-   		top: 0rem;
-		text-align: center;
-		position: fixed;
-		background: wheat 0 ;
+
+	.page .header .nav ul li.right {float: right;}
+
+	@media screen and (max-width: 600px) {
+		.page .header .nav ul li.right, .page .header .nav ul li {float: none;}
 	}
-	.footer {
+
+	.page .content {
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+		flex: 1 1 auto;
+	}
+
+	.page .footer {
+		background: wheat;
    		left: 0.5rem;
 		right: 0.5rem;
    		bottom: 0rem;
    		text-align: center;
 		position: fixed;
-		background: wheat;
 		border-top: 1px solid #bbb;
 		height: 4.5rem;
 		vertical-align: bottom;
 	}
+
+	.page .footer a {
+		text-decoration: none;
+		color: black;
+	}
+
 	.clear {
 		clear: both;
 		height: 4.5rem;

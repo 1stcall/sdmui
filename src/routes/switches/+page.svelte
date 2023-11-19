@@ -10,8 +10,9 @@
 		<div class="row">
 			<td class="firstcol"><label for="{ name }">{ name }</label></td>
 			<td class="col"><input id="{ name }" type="checkbox" bind:checked="{ selected }" disabled="{ !editable }"></td>
+			<td class="col">
 			{#if hasArgument == true}
-				<td class="col">
+				<p>
 					{#if argumentType == "text"}
 						<input type="text" disabled="{ !selected }" bind:value="{ argumentValue }">
 					{:else if argumentType == "file"}
@@ -21,11 +22,9 @@
 					{:else if argumentType == "multiFile"}
 						<input type="file" disabled="{ !selected }" bind:value="{ argumentValue }" multiple>
 					{/if}
-				</td>
-			{:else}
-				<td> </td>
+				</p>
 			{/if}
-			<p>{ description }</p>
+			<p>{ description }</p> </td>
 		</div>
 	{/each}
 </form>
