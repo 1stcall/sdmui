@@ -56,7 +56,7 @@
 						/>
 					{/if}
 				{/if}
-				<div class="description">{description}</div></td
+				<div class="description">{@html description}</div></td
 			>
 		</div>
 	{/each}

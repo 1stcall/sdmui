@@ -24,7 +24,7 @@
 	{
 		"switch": "apt-dist-upgrade",
 		"description":
-			"Some RasPiOS Bullseye images have a strange software configuration, which causes apt-get upgrade to fail. This switch forces sdm to use apt-get --dist-upgrade which updates correctly. [In the 2021-10-30 set of images, the 'with Desktop' versions have a set of problematic VLC modules installed.]",
+			"Some RasPiOS Bullseye images have a strange software configuration, which causes apt-get upgrade to fail. This switch forces sdm to use apt-get --dist-upgrade which updates correctly. <br>In the 2021-10-30 set of images, the 'with Desktop' versions have a set of problematic VLC modules installed.",
 		"selected": true,
 		"editable": true,
 		"hasArgument": false
