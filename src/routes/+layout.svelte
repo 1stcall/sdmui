@@ -11,7 +11,13 @@
 
 <div class="page">
 	<div class="header">
-		<h1>1stcall's sdm command line generator</h1>
+		<div class="headlogo">
+			<i class="fa-solid fa-tty fa-1xl"></i>
+			1stcall
+		</div>
+		<div class="headtext">
+			SDM Command Line Generator
+		</div>
 		<nav class="nav">
 			<ul>
 				<li><a href="/">home</a></li>
@@ -29,46 +35,64 @@
 	<div class="clear"></div>
 
 	<div class="footer">
-		<p>
-			Copyright &copy; 2023 1stcall Information Technology.  All rights researved.
-		</p>
+		<p>Copyright &copy; 2023 1stcall Information Technology.  All rights researved.</p>
+		<p> <a href="https://github.com/1stcall/sdmui/"><i class="fa-brands fa-github"></i> See on github</a></p>
 	</div>
 </div>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 	.page {
 		background: wheat;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 1rem;
+		font-family: sans-serif;
 	}
 
-	.content {
-		display: flex;
-		flex-flow: column;
-		height: 100%;
-		flex: 1 1 auto;
+	.page .header {
+		background: wheat;
+		top: 0;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		color: #194a9f;
+		font-family: 'Brush Script MT', cursive;
 	}
 
-	.nav ul {
+	.page .header .headlogo {
+		font-size: 4rem;
+	}
+
+	.page .header .headtext {
+		font-size: 2rem;
+		position: fixed;
+		top: 3rem;
+		width: 100%;
+		text-align: center;
+	}
+
+	.page .header .nav {
+		font-family: sans-serif;
+	}
+
+	.page .header .nav ul {
 		list-style-type: none;
-		margin: 0;
-		padding: 0;
 		overflow: hidden;
 		background-color: #333;
+		padding: 0;
 	}
 
-	.nav ul li {
+	.page .header .nav ul li {
 		float: left;
 		border-left: none;
 		border-right: 1px solid #bbb;
 	}
 
-	.nav ul li:last-child {
+	.page .header .nav ul li:last-child {
 		border-right: none;
 		border-left: 1px solid #bbb;
 	}
 
-	.nav ul li a {
+	.page .header .nav ul li a {
 		display: block;
 		color: white;
 		text-align: center;
@@ -76,35 +100,38 @@
 		text-decoration: none;
 	}
 
-	.nav ul li a:hover {
+	.page .header .nav ul li a:hover {
 		background-color: #111;
 	}
-	.nav ul li.right {float: right;}
+
+	.page .header .nav ul li.right {float: right;}
 
 	@media screen and (max-width: 600px) {
-		.nav ul li.right, .nav ul li {float: none;}
+		.page .header .nav ul li.right, .page .header .nav ul li {float: none;}
 	}
 
-	.header {
-		left: 0.5rem;
-		right: 0.5rem;
-   		top: 0rem;
-		text-align: center;
-		position: -webkit-sticky; /* Safari */
-		position: sticky;
-		background: wheat 0 ;
+	.page .content {
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+		flex: 1 1 auto;
 	}
 
-	.footer {
+	.page .footer {
+		background: wheat;
    		left: 0.5rem;
 		right: 0.5rem;
    		bottom: 0rem;
    		text-align: center;
 		position: fixed;
-		background: wheat;
 		border-top: 1px solid #bbb;
 		height: 4.5rem;
 		vertical-align: bottom;
+	}
+
+	.page .footer a {
+		text-decoration: none;
+		color: black;
 	}
 
 	.clear {
