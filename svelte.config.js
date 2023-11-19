@@ -8,7 +8,9 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter()
 	},
-	customElement: true
+	compilerOptions: {
+        customElement: true,
+    }
 };
 
 export default config;
