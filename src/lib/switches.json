@@ -7,18 +7,22 @@
 		"editable": true,
 		"hasArgument": true,
 		"argumentType": "file",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a 1piboot.conf file.</span>",
+		"errorMessage": "<span style='color: red'>A valid 1piboot.conf file is required.</span>"
 	},
 
 	{
 		"switch": "aptcache",
 		"description":
-			"Use APT caching. The argument is the IP address of the apt-cacher-ng server",
+			"Use APT caching. The argument is the IP address of the apt-cacher-ng server.",
 		"selected": false,
 		"editable": true,
 		"hasArgument": true,
 		"argumentType": "ipAddress",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Enter the IP address of the apt-cacher-ng server.</span>",
+		"errorMessage": "<span style='color: red'>A valid IP address is required.</span>"
 	},
 
 	{
@@ -47,7 +51,9 @@
 		"editable": true,
 		"hasArgument": true,
 		"argumentType": "file",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a b0script file.</span>",
+		"errorMessage": "<span style='color: red'>A valid b0script file is required.</span>"
 	},
 
 	{
@@ -58,7 +64,9 @@
 		"editable": true,
 		"hasArgument": true,
 		"argumentType": "file",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a b1script file.</span>",
+		"errorMessage": "<span style='color: red'>A valid b1script file is required.</span>"
 	},
 
 	{
@@ -77,19 +85,23 @@
 		"selected": false,
 		"editable": true,
 		"hasArgument": true,
-		"argumentType": "multiFile",
-		"argumentValue": ""
+		"argumentType": "directory",
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a boot script directory.</span>",
+		"errorMessage": "<span style='color: red'>A valid boot script directory is required.</span>"
 	},
 
 	{
 		"switch": "bupdate",
 		"description":
-			"Used only on --burn command. item can be plugin: Check and update plugins",
+			"Used only on --burn command. Item can be plugin: Check and update plugins",
 		"selected": false,
 		"editable": false,
 		"hasArgument": true,
 		"argumentType": "file",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a plugin file, or leave empty for all plugins.</span>",
+		"errorMessage": "<span style='color: red'>A valid plugin file is required, or leave blank for all.</span>"
 	},
 
 	{
@@ -109,7 +121,9 @@
 		"editable": true,
 		"hasArgument": true,
 		"argumentType": "file",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a Custom Phase Script file.</span>",
+		"errorMessage": "<span style='color: red'>A valid Custom Phase Script file is required.</span>"
 	},
 
 	{
@@ -117,9 +131,12 @@
 		"description":
 			"A source directory string that can be used in your Custom Phase Script. One use for this is to have a directory tree where all your customizations are kept, and pass in the directory tree to sdm with --csrc.",
 		"selected": false,
-		"editable": false,
+		"editable": true,
 		"hasArgument": true,
 		"argumentType": "directory",
-		"argumentValue": ""
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Select a Custom Phase Script directory.</span>",
+		"errorMessage": "<span style='color: red'>A valid boot script directory is required.</span>",
+		"depends": "cscript"
 	}
 ]

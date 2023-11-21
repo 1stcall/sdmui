@@ -9,7 +9,10 @@ export function load() {
 			editable: switches.editable,
 			hasArgument: switches.hasArgument,
 			argumentType: switches.argumentType,
-			argumentValue: switches.argumentValue
+			argumentValue: switches.argumentValue,
+			message: switches.message,
+			errorMessage: switches.errorMessage,
+			depends: switches.depends
 		}))
 	};
 }
