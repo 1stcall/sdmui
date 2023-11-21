@@ -60,6 +60,7 @@
 			>
 		</div>
 	{/each}
+	<input type="submit">
 </form>
 
 <style>
