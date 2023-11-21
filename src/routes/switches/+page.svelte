@@ -6,7 +6,7 @@
 <h3 class="heading3">This is the Switches list page for sdmui.</h3>
 
 <form class="switches">
-	{#each data.switches as { name, description, selected, editable, hasArgument, argumentType, argumentValue }}
+	{#each data.switches as { name, description, selected, editable, hasArgument, argumentType, argumentValue, message, errorMessage, depends }}
 		<div class="row">
 			<td class="col firstcol">
 				<label class="label" for={name}>{name}</label>
@@ -19,48 +19,59 @@
 					bind:checked={selected}
 					disabled={!editable}
 				/>
-				<label class="checkmark" for={name}></label>
+				<label class="checkmark" for={name} />
 			</td>
 			<td class="col thirdcol">
-				{#if hasArgument == true}
-					{#if argumentType == "text"}
-						<input
-							type="text"
-							disabled={!selected}
-							bind:value={argumentValue}
-						/>
-					{:else if argumentType == "file"}
-						<input
-							type="file"
-							disabled={!selected}
-							bind:value={argumentValue}
-						/>
-					{:else if argumentType == "ipAddress"}
-						<input
-							type="text"
-							disabled={!selected}
-							bind:value={argumentValue}
-							minlength="7"
-							maxlength="15"
-							size="15"
-							pattern="^((\d{(1,
-							2)}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{(1,
-							2)}|1\d\d|2[0-4]\d|25[0-5])$"
-						/>
-					{:else if argumentType == "multiFile"}
-						<input
-							type="file"
-							disabled={!selected}
-							bind:value={argumentValue}
-							multiple
-						/>
+				<p class="input">
+					{#if hasArgument == true}
+						{#if argumentType == "text"}
+							<input
+								type="text"
+								disabled={!selected}
+								bind:value={argumentValue}
+								required
+							/>
+						{:else if argumentType == "file"}
+							<input
+								type="file"
+								disabled={!selected}
+								bind:value={argumentValue}
+								required
+							/>
+						{:else if argumentType == "ipAddress"}
+							<input
+								type="text"
+								disabled={!selected}
+								bind:value={argumentValue}
+								minlength="7"
+								maxlength="15"
+								size="15"
+								pattern="^((\d{(1,
+								2)}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{(1,
+								2)}|1\d\d|2[0-4]\d|25[0-5])$"
+								required
+							/>
+						{:else if argumentType == "multiFile"}
+							<input
+								type="file"
+								disabled={!selected}
+								bind:value={argumentValue}
+								multiple
+								required
+							/>
+						{/if}
+						{#if selected}
+							<span id="inputMessage">{@html message}</span><span id="errorMessage" hidden>{@html errorMessage}</span>
+						{/if}
+					{:else}
+						<br />
 					{/if}
-				{/if}
+				</p>
 				<div class="description">{@html description}</div></td
 			>
 		</div>
 	{/each}
-	<input type="submit">
+	<input type="submit" />
 </form>
 
 <style>
@@ -97,6 +108,14 @@
 
 	.thirdcol {
 		overflow: hidden;
+	}
+
+	.input {
+		margin-bottom: 0;
+	}
+
+	.description {
+		margin-top: 0;
 	}
 
 	/* The container */
