@@ -1,11 +1,22 @@
 <script>
 	export let data;
+	export let selected="empty";
 </script>
 
 <h1 class="heading1">Switches list</h1>
 <h3 class="heading3">This is the Switches list page for sdmui.</h3>
 
 <form class="switches">
+
+	<select id="piosval" bind:value={selected}>
+		{#each data.pioslist as {id, name, description}}
+			<option value={id}>
+				{name} - {description}
+			</option>
+		{/each}
+	</select>
+	<p>{selected}</p>
+
 	{#each data.switches as { name, description, selected, editable, hasArgument, argumentType, argumentValue, message, errorMessage, depends }}
 		<div class="row">
 			<td class="col firstcol">
