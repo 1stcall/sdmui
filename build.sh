@@ -2,8 +2,8 @@
 
 set -e
 
-npm ci --omit=dev
+npm clean-install
 npm run build
-cp ./package*.json ./build/
-cp ./Dockerfile ./build/
-cp ./compose.yaml ./build/
+cp --verbose --archive ./package*.json ./build/
+cp --verbose --archive ./Dockerfile ./build/
+cp --verbose --archive ./compose.yaml ./build/
