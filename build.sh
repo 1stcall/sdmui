@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-docker stop sdmui --time 0
-docker system prune --all --force
+set -e
 
+npm clean-install
 npm run build
-
-docker build . -t sdmui
-docker run --detach --publish 80:80 --name sdmui -t sdmui
-sleep 2
-docker logs sdmui 
+cp --verbose --archive ./package*.json ./build/
+cp --verbose --archive ./Dockerfile ./build/
+cp --verbose --archive ./compose.yaml ./build/
