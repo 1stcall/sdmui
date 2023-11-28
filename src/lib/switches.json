@@ -138,5 +138,111 @@
 		"message": "<span style='color: grey'>Select a Custom Phase Script directory.</span>",
 		"errorMessage": "<span style='color: red'>A valid boot script directory is required.</span>",
 		"depends": "cscript"
+	},
+	{
+		"switch": "datefmt",
+		"description":
+			"Use the specified date format instead of the default \"%Y-%m-%d %H:%M:%S\". See man date for format string details.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": true,
+		"argumentType": "text",
+		"argumentValue": "%Y-%m-%d %H:%M:%S",
+		"message": "<span style='color: grey'>Enter a date format string.</span>",
+		"errorMessage": "<span style='color: red'>A valid date format string is required.</span>"
+
+	},
+	{
+		"switch": "ddsw",
+		"description": 
+			"Provide switches for the dd command used with --burn. The default is \"bs=16M iflag=direct\". If --ddsw is specified, it replaces the default value.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": true,
+		"argumentType": "text",
+		"argumentValue": "bs=16M iflag=direct",
+		"message": "<span style='color: grey'>Enter dd switches.</span>",
+		"errorMessage": "<span style='color: red'>A valid dd switch is required.</span>"
+	},
+	{
+		"switch": "expand-root",
+		"description":
+			"Used with --burn. Expands the root partition on the SSD/SD Card after burning, and disables the default (quick) first boot that does this, since sdm has already expanded the partition.",
+		"editable": false,
+		"hasArgument": false
+	},
+	{
+		"switch": "extend",
+		"description": "Used in conjunction with the --xmb switch to extend an image. If used without --customize the IMG is extended but no other action is taken. If used with --customize the IMG is extended before the IMG is customized.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": false
+	},
+	{
+		"switch": "groups",
+		"description": "Specify the groups to be added to new users created with the user plugin. The default list is: dialout,cdrom,floppy,audio,video,plugdev,users,adm,sudo,users,input,netdev,spi,i2c,gpio.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": true,
+		"argumentType": "text",
+		"argumentValue": "dialout,cdrom,floppy,audio,video,plugdev,users,adm,sudo,users,input,netdev,spi,i2c,gpio",
+		"message": "<span style='color: grey'>Enter a list of user groups.</span>",
+		"errorMessage": "<span style='color: red'>A valid list of user groups is required.</span>"
+	},
+	{
+		"switch": "host/hostname",
+		"description": "Specifies the name of the host to set onto the SD Card when burning it.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": true,
+		"argumentType": "text",
+		"argumentValue": "raspberrypi",
+		"message": "<span style='color: grey'>Enter a hostname.</span>",
+		"errorMessage": "<span style='color: red'>A valid hostname is required.</span>"
+	},
+	{
+		"switch": "loadlocal wifi",
+		"description" :"Starts a WiFi Captive Portal to obtain and test the WiFi Credentials during the First Boot. See Captive Portal for details. The flashled and internet options are not supported with --loadlocal wifi.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": false
+	},
+	{	"switch": "logwidth",
+		"description": "Set the maximum log line width before lines are split. Default is 96 characters.",
+		"selected": false,
+		"editable":true,
+		"hasArgument": true,
+		"argumentType": "integer",
+		"argumentValue": 96,
+		"message":"<span style='color: grey'>Enter a width for the logfile.</span>",
+		"errorMessage":"<span style='color: red'>A valid width for the log file is required.</span>"
+	},
+	{
+		"switch": "norestart/noreboot",
+		"description": "Do not restart the system after the First Boot. This is useful if you set --restart when you build the image, but want to disable the automatic restart for a particular SD Card when you burn it.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": false
+	},
+	{
+		"switch": "nowait-timesync",
+		"description": "Don't wait for the system time to sync in sdm FirstBoot.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": false
+	},
+	{
+		"switch": "nspawnsw",
+		"description": "Provide additional switches for the systemd-nspawn command. See man systemd-nspawn.",
+		"selected": false,
+		"editable": true,
+		"hasArgument": true,
+		"argumentType": "text",
+		"argumentValue": "",
+		"message": "<span style='color: grey'>Enter one or more arguments for nspawn.</span>",
+		"errorMessage": "<span style='color: red'>A valid argument for nspawn is required.</span>"
+	},
+	{
+		"switch": "plugin"
 	}
 ]
