@@ -55,7 +55,7 @@
 
 	<div class="footer">
 		<p>
-			sdmui V0.3 Copyright &copy; 2023 1stcall Information Technology. All
+			sdmui V0.0dev Copyright &copy; 2023 1stcall Information Technology. All
 			rights researved.<br />
 			<a href="https://github.com/1stcall/sdmui/"
 				><i class="fa-brands fa-github" /> See us on github.</a
