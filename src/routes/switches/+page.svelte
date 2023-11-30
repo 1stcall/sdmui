@@ -72,17 +72,20 @@
 								/>
 							{/if}
 							{#if selected}
-								<span id="inputMessage">{@html message}</span
-								><span id="errorMessage" hidden
-									>{@html errorMessage}</span
+								<span id="inputMessage" style="color: grey"
+									>{message}</span
+								><span
+									id="errorMessage"
+									hidden
+									style="color: red">{errorMessage}</span
 								>
 							{/if}
 						{:else}
 							<br />
 						{/if}
 					</p>
-					<div class="description">{@html description}</div></td
-				>
+					<div class="description">{@html description}</div>
+				</td>
 			</div>
 		{/each}
 	</div>
