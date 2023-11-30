@@ -2,14 +2,14 @@
 	{
 		"switch": "1piboot",
 		"description":
-			"Specify a 1piboot.conf file to use instead of the one in /usr/local/sdm/1piboot/1piboot.conf.",
+			"Specify a 1piboot.conf file to use instead of the one in <code>/usr/local/sdm/1piboot/1piboot.conf</code>.",
 		"selected": false,
 		"editable": true,
 		"hasArgument": true,
 		"argumentType": "file",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a 1piboot.conf file.</span>",
-		"errorMessage": "<span style='color: red'>A valid 1piboot.conf file is required.</span>"
+		"message": "Select a 1piboot.conf file.",
+		"errorMessage": "A valid 1piboot.conf file is required."
 	},
 
 	{
@@ -21,8 +21,8 @@
 		"hasArgument": true,
 		"argumentType": "ipAddress",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Enter the IP address of the apt-cacher-ng server.</span>",
-		"errorMessage": "<span style='color: red'>A valid IP address is required.</span>"
+		"message": "Enter the IP address of the apt-cacher-ng server.",
+		"errorMessage": "A valid IP address is required."
 	},
 
 	{
@@ -52,8 +52,8 @@
 		"hasArgument": true,
 		"argumentType": "file",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a b0script file.</span>",
-		"errorMessage": "<span style='color: red'>A valid b0script file is required.</span>"
+		"message": "Select a b0script file.",
+		"errorMessage": "A valid b0script file is required."
 	},
 
 	{
@@ -65,8 +65,8 @@
 		"hasArgument": true,
 		"argumentType": "file",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a b1script file.</span>",
-		"errorMessage": "<span style='color: red'>A valid b1script file is required.</span>"
+		"message": "Select a b1script file.",
+		"errorMessage": "A valid b1script file is required."
 	},
 
 	{
@@ -87,8 +87,8 @@
 		"hasArgument": true,
 		"argumentType": "directory",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a boot script directory.</span>",
-		"errorMessage": "<span style='color: red'>A valid boot script directory is required.</span>"
+		"message": "Select a boot script directory.",
+		"errorMessage": "A valid boot script directory is required."
 	},
 
 	{
@@ -100,8 +100,8 @@
 		"hasArgument": true,
 		"argumentType": "file",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a plugin file, or leave empty for all plugins.</span>",
-		"errorMessage": "<span style='color: red'>A valid plugin file is required, or leave blank for all.</span>"
+		"message": "Select a plugin file, or leave empty for all plugins.",
+		"errorMessage": "A valid plugin file is required, or leave blank for all."
 	},
 
 	{
@@ -122,8 +122,8 @@
 		"hasArgument": true,
 		"argumentType": "file",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a Custom Phase Script file.</span>",
-		"errorMessage": "<span style='color: red'>A valid Custom Phase Script file is required.</span>"
+		"message": "Select a Custom Phase Script file.",
+		"errorMessage": "A valid Custom Phase Script file is required."
 	},
 
 	{
@@ -135,8 +135,8 @@
 		"hasArgument": true,
 		"argumentType": "directory",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Select a Custom Phase Script directory.</span>",
-		"errorMessage": "<span style='color: red'>A valid boot script directory is required.</span>",
+		"message": "Select a Custom Phase Script directory.",
+		"errorMessage": "A valid boot script directory is required.",
 		"depends": "cscript"
 	},
 	{
@@ -148,8 +148,8 @@
 		"hasArgument": true,
 		"argumentType": "text",
 		"argumentValue": "%Y-%m-%d %H:%M:%S",
-		"message": "<span style='color: grey'>Enter a date format string.</span>",
-		"errorMessage": "<span style='color: red'>A valid date format string is required.</span>"
+		"message": "Enter a date format string.",
+		"errorMessage": "A valid date format string is required."
 
 	},
 	{
@@ -161,8 +161,8 @@
 		"hasArgument": true,
 		"argumentType": "text",
 		"argumentValue": "bs=16M iflag=direct",
-		"message": "<span style='color: grey'>Enter dd switches.</span>",
-		"errorMessage": "<span style='color: red'>A valid dd switch is required.</span>"
+		"message": "Enter dd switches.",
+		"errorMessage": "A valid dd switch is required."
 	},
 	{
 		"switch": "expand-root",
@@ -186,8 +186,8 @@
 		"hasArgument": true,
 		"argumentType": "text",
 		"argumentValue": "dialout,cdrom,floppy,audio,video,plugdev,users,adm,sudo,users,input,netdev,spi,i2c,gpio",
-		"message": "<span style='color: grey'>Enter a list of user groups.</span>",
-		"errorMessage": "<span style='color: red'>A valid list of user groups is required.</span>"
+		"message": "Enter a list of user groups.",
+		"errorMessage": "A valid list of user groups is required."
 	},
 	{
 		"switch": "host/hostname",
@@ -197,8 +197,8 @@
 		"hasArgument": true,
 		"argumentType": "text",
 		"argumentValue": "raspberrypi",
-		"message": "<span style='color: grey'>Enter a hostname.</span>",
-		"errorMessage": "<span style='color: red'>A valid hostname is required.</span>"
+		"message": "Enter a hostname.",
+		"errorMessage": "A valid hostname is required."
 	},
 	{
 		"switch": "loadlocal wifi",
@@ -214,8 +214,8 @@
 		"hasArgument": true,
 		"argumentType": "integer",
 		"argumentValue": 96,
-		"message":"<span style='color: grey'>Enter a width for the logfile.</span>",
-		"errorMessage":"<span style='color: red'>A valid width for the log file is required.</span>"
+		"message":"Enter a width for the logfile.",
+		"errorMessage":"A valid width for the log file is required."
 	},
 	{
 		"switch": "norestart/noreboot",
@@ -239,8 +239,8 @@
 		"hasArgument": true,
 		"argumentType": "text",
 		"argumentValue": "",
-		"message": "<span style='color: grey'>Enter one or more arguments for nspawn.</span>",
-		"errorMessage": "<span style='color: red'>A valid argument for nspawn is required.</span>"
+		"message": "Enter one or more arguments for nspawn.",
+		"errorMessage": "A valid argument for nspawn is required."
 	},
 	{
 		"switch": "plugin"
