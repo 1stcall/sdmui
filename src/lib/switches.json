@@ -311,17 +311,13 @@
 		"editable": true,
 		"hasArgument": false
 	},
+
+{"comment1": "--runonly plugins — Only run plugins. If no device or directory specified, sdm defaults to directory '/' on the running system.",
+"comment2": "--showapt — Show the output from apt (Package Manager) on the terminal in Phase 1. By default, the output is not displayed on the terminal. All apt output is captured in /etc/sdm/apt.log in the IMG.",
+"comment3": "--sdmdir /path/to — sdm normally is in /usr/local/sdm. If you want it to be put somewhere else when you customize an image, use this switch to specify the location. To install sdm itself into a different directory, specify it as the parameter to EZsdmInstall when you first install sdm",
+"comment4": "--update-plugins — Typically for sdm development use only. When plugins are used during an sdm burn, they are run from the copy in the source IMG. This switch causes sdm to look for newer updates on the host system, and update the burn target before running the plugins.",
+"comment5": "--vncbase base — Set the base port for VNC virtual desktops; RealVNC Console service is not changed.",
+"comment6": "--wifi-country countryname — Specify the name of the country to use for the WiFi Country setting. See /usr/share/zoneinfo/iso3166.tab for the complete WiFi Country code list. Also see the --l10n command switch which will extract the current WiFi Country setting from /etc/wpa_supplicant/wpa_supplicant.conf or /etc/wpa_supplicant/wpa_supplicant-wlan0.conf on the system on which sdm is running.",
+"comment7": "--xmb n — Specify the number of MB to extend the image. The default is 2048 (MB), which is 2GB. You may need to increase this depending on the number of packages you choose to install in Phase 1. If the image isn't large enough, package installations will fail. If the image is too large, it will consume more disk space, and burning the image to an SD Card will take longer."
+}
 ]
---runonly plugins — Only run plugins. If no device or directory specified, sdm defaults to directory '/' on the running system.
-
---showapt — Show the output from apt (Package Manager) on the terminal in Phase 1. By default, the output is not displayed on the terminal. All apt output is captured in /etc/sdm/apt.log in the IMG.
-
---sdmdir /path/to — sdm normally is in /usr/local/sdm. If you want it to be put somewhere else when you customize an image, use this switch to specify the location. To install sdm itself into a different directory, specify it as the parameter to EZsdmInstall when you first install sdm
-
---update-plugins — Typically for sdm development use only. When plugins are used during an sdm burn, they are run from the copy in the source IMG. This switch causes sdm to look for newer updates on the host system, and update the burn target before running the plugins.
-
---vncbase base — Set the base port for VNC virtual desktops; RealVNC Console service is not changed.
-
---wifi-country countryname — Specify the name of the country to use for the WiFi Country setting. See /usr/share/zoneinfo/iso3166.tab for the complete WiFi Country code list. Also see the --l10n command switch which will extract the current WiFi Country setting from /etc/wpa_supplicant/wpa_supplicant.conf or /etc/wpa_supplicant/wpa_supplicant-wlan0.conf on the system on which sdm is running.
-
---xmb n — Specify the number of MB to extend the image. The default is 2048 (MB), which is 2GB. You may need to increase this depending on the number of packages you choose to install in Phase 1. If the image isn't large enough, package installations will fail. If the image is too large, it will consume more disk space, and burning the image to an SD Card will take longer.
