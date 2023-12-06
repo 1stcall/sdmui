@@ -1,15 +1,14 @@
 <script>
 	export let data;
-	export let selected="empty";
+	export let selected = "empty";
 </script>
 
 <h1 class="heading1">Switches list</h1>
 <h3 class="heading3">This is the Switches list page for sdmui.</h3>
 
-<form class="switches">
-
+<form>
 	<select id="piosval" bind:value={selected}>
-		{#each data.pioslist as {id, name, description}}
+		{#each data.pioslist as { id, name, description }}
 			<option value={id}>
 				{name} - {description}
 			</option>
@@ -17,71 +16,79 @@
 	</select>
 	<p>{selected}</p>
 
-	{#each data.switches as { name, description, selected, editable, hasArgument, argumentType, argumentValue, message, errorMessage, depends }}
-		<div class="row">
-			<td class="col firstcol">
-				<label class="label" for={name}>{name}</label>
-			</td>
-			<td class="col secondcol">
-				<input
-					class="checkbox"
-					id={name}
-					type="checkbox"
-					bind:checked={selected}
-					disabled={!editable}
-				/>
-				<label class="checkmark" for={name} />
-			</td>
-			<td class="col thirdcol">
-				<p class="input">
-					{#if hasArgument == true}
-						{#if argumentType == "text"}
-							<input
-								type="text"
-								disabled={!selected}
-								bind:value={argumentValue}
-								required
-							/>
-						{:else if argumentType == "file"}
-							<input
-								type="file"
-								disabled={!selected}
-								bind:value={argumentValue}
-								required
-							/>
-						{:else if argumentType == "ipAddress"}
-							<input
-								type="text"
-								disabled={!selected}
-								bind:value={argumentValue}
-								minlength="7"
-								maxlength="15"
-								size="15"
-								pattern="^((\d{(1,
-								2)}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{(1,
-								2)}|1\d\d|2[0-4]\d|25[0-5])$"
-								required
-							/>
-						{:else if argumentType == "multiFile"}
-							<input
-								type="file"
-								disabled={!selected}
-								bind:value={argumentValue}
-								multiple
-								required
-							/>
+	<div class="switches">
+		{#each data.switches as { name, description, selected, editable, hasArgument, argumentType, argumentValue, message, errorMessage, depends }}
+			<div class="row">
+				<td class="col firstcol">
+					<label class="label" for={name}>{name}</label>
+				</td>
+				<td class="col secondcol">
+					<input
+						class="checkbox"
+						id={name}
+						type="checkbox"
+						bind:checked={selected}
+						disabled={!editable}
+					/>
+					<label class="checkmark" for={name} />
+				</td>
+				<td class="col thirdcol">
+					<p class="input">
+						{#if hasArgument == true}
+							{#if argumentType == "text"}
+								<input
+									type="text"
+									disabled={!selected}
+									bind:value={argumentValue}
+									required
+								/>
+							{:else if argumentType == "file"}
+								<input
+									type="file"
+									disabled={!selected}
+									bind:value={argumentValue}
+									required
+								/>
+							{:else if argumentType == "ipAddress"}
+								<input
+									type="text"
+									disabled={!selected}
+									bind:value={argumentValue}
+									minlength="7"
+									maxlength="15"
+									size="15"
+									pattern="^((\d{(1,
+									2)}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{(1,
+									2)}|1\d\d|2[0-4]\d|25[0-5])$"
+									required
+								/>
+							{:else if argumentType == "multiFile"}
+								<input
+									type="file"
+									disabled={!selected}
+									bind:value={argumentValue}
+									multiple
+									required
+								/>
+							{/if}
+							{#if selected}
+								<span id="inputMessage" style="color: grey"
+									>{message}</span
+								><span
+									id="errorMessage"
+									hidden
+									style="color: red">{errorMessage}</span
+								>
+							{/if}
+						{:else}
+							<br />
 						{/if}
-						{#if selected}
-							<span id="inputMessage">{@html message}</span><span id="errorMessage" hidden>{@html errorMessage}</span>
-						{/if}
-					{:else}
-						<br />
-					{/if}
-				</p>
-				<div class="description">{@html description}</div></td
-			>
-		</div>
-	{/each}
+					</p>
+					<div class="description">{@html description}</div>
+				</td>
+			</div>
+		{/each}
+	</div>
 	<input type="submit" />
 </form>
 

@@ -1,3 +1,12 @@
+<script>
+	import "@beyonk/gdpr-cookie-consent-banner/banner.css"; // optional, you can also define your own styles
+	import GdprBanner from "@beyonk/gdpr-cookie-consent-banner";
+
+	function initAnalytics() {
+		// do something with segment.io or google analytics etc
+	}
+</script>
+
 <svelte:head>
 	<link
 		href="https://fonts.googleapis.com/css?family=Handlee|Nanum Brush Script"
@@ -11,15 +20,6 @@
 		referrerpolicy="no-referrer"
 	/>
 </svelte:head>
-
-<script>
-	import "@beyonk/gdpr-cookie-consent-banner/banner.css"; // optional, you can also define your own styles
-	import GdprBanner from "@beyonk/gdpr-cookie-consent-banner";
-
-	function initAnalytics() {
-		// do something with segment.io or google analytics etc
-	}
-</script>
 
 <GdprBanner
 	heading="GDPR Cookie Notice"
@@ -55,8 +55,8 @@
 
 	<div class="footer">
 		<p>
-			sdmui V0.3 Copyright &copy; 2023 1stcall Information Technology. All
-			rights researved.<br />
+			sdmui V0.1test Copyright &copy; 2023 1stcall Information Technology.
+			All rights researved.<br />
 			<a href="https://github.com/1stcall/sdmui/"
 				><i class="fa-brands fa-github" /> See us on github.</a
 			>
