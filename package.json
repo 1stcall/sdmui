@@ -10,7 +10,7 @@
 	"devDependencies": {
 		"@beyonk/gdpr-cookie-consent-banner": "^12.1.0",
 		"@sveltejs/adapter-auto": "^2.1.1",
-		"@sveltejs/kit": "^1.20.4",
+		"@sveltejs/kit": "^1.30.4",
 		"svelte": "^4.0.5",
 		"vite": "^4.5.2"
 	},
